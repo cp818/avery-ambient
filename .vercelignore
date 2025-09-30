@@ -1,0 +1,25 @@
+# Files to ignore during Vercel deployment
+
+# Documentation
+ANALYSIS_SUMMARY.md
+DEPLOYMENT_CHECKLIST.md
+
+# Environment examples
+env.example
+
+# Development files
+.env.local
+.env.development
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+
+# Misc
+.DS_Store
+*.pem
