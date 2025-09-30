@@ -110,7 +110,7 @@ const MedicalVoiceAgent = () => {
     setLoading(true);
     setCallStatus('starting');
     try {
-      const vapi = new Vapi(process.env.NEXT_PUBLIC_VAPI_API_KEY!);
+      const vapi = new Vapi(process.env.NEXT_PUBLIC_VAPI_PUBLIC_KEY!);
       setVapiInstance(vapi);
 
       // Log the configuration for debugging
