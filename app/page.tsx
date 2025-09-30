@@ -9,9 +9,9 @@ import { useRouter } from "next/navigation";
 export default function HeroSectionOne() {
   const router = useRouter();
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-purple-600 via-blue-500 to-cyan-400">
+    <div className="relative min-h-screen w-full flex flex-col bg-gradient-to-br from-purple-600 via-blue-500 to-cyan-400">
       <Navbar />
-      <div className="px-4 py-10 md:py-20">
+      <div className="flex-1 flex flex-col items-center justify-center px-4 py-10 md:py-20">
         <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold text-white md:text-4xl lg:text-7xl">
           {"AVERY"
             .split(" ")
@@ -77,7 +77,7 @@ const Navbar = () => {
   const {user} = useUser();
   const router = useRouter();
   return (
-    <nav className="flex w-full items-center justify-between px-4 py-4">
+    <nav className="flex w-full items-center justify-between px-6 py-3">
       <div className="flex items-center gap-2">
         <div className="size-7 rounded-full bg-white/20 backdrop-blur-sm border border-white/30" />
         <h1 className="text-base font-bold md:text-2xl text-white">Avery Ambient</h1>
