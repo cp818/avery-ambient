@@ -82,7 +82,7 @@ const AddNewSession = () => {
         <div>
             <Dialog>
                 <DialogTrigger asChild>
-                    <Button className="mt-3" disabled={!paidUser&&historyList.length>=1}>+ Start Consultation</Button>
+                    <Button className="mt-3">+ Start Consultation</Button>
                 </DialogTrigger>
                 <DialogContent>
                     <DialogHeader>
