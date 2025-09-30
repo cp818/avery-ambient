@@ -9,19 +9,10 @@ import { useRouter } from "next/navigation";
 export default function HeroSectionOne() {
   const router = useRouter();
   return (
-    <div className="relative  flex flex-col items-center justify-center">
+    <div className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-purple-600 via-blue-500 to-cyan-400">
       <Navbar />
-      <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
-        <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-blue-500 to-transparent" />
-      </div>
-      <div className="absolute inset-y-0 right-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
-        <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-blue-500 to-transparent" />
-      </div>
-      <div className="absolute inset-x-0 bottom-0 h-px w-full bg-neutral-200/80 dark:bg-neutral-800/80">
-        <div className="absolute mx-auto h-px w-40 bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
-      </div>
       <div className="px-4 py-10 md:py-20">
-        <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold text-slate-700 md:text-4xl lg:text-7xl dark:text-slate-300">
+        <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold text-white md:text-4xl lg:text-7xl">
           {"AVERY"
             .split(" ")
             .map((word, index) => (
@@ -51,7 +42,7 @@ export default function HeroSectionOne() {
             duration: 0.3,
             delay: 0.8,
           }}
-          className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-normal text-neutral-600 dark:text-neutral-400"
+          className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-normal text-white"
         >
           Transform patient care with intelligent voice technology that handles appointments, 
           answers medical questions, and provides 24/7 support. Reduce administrative burden 
@@ -71,7 +62,7 @@ export default function HeroSectionOne() {
           }}
           className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
         >
-          <button onClick={() => router.push("/dashboard")} className="w-60 transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200">
+          <button onClick={() => router.push("/dashboard")} className="w-60 transform rounded-lg bg-white px-6 py-3 font-medium text-purple-600 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/90 shadow-lg">
             Get Started
           </button>
          
@@ -86,14 +77,14 @@ const Navbar = () => {
   const {user} = useUser();
   const router = useRouter();
   return (
-    <nav className="flex w-full items-center justify-between border-t border-b border-neutral-200 px-4 py-4 dark:border-neutral-800">
+    <nav className="flex w-full items-center justify-between px-4 py-4">
       <div className="flex items-center gap-2">
-        <div className="size-7 rounded-full bg-gradient-to-br from-violet-500 to-pink-500" />
-        <h1 className="text-base font-bold md:text-2xl">Avery Ambient</h1>
+        <div className="size-7 rounded-full bg-white/20 backdrop-blur-sm border border-white/30" />
+        <h1 className="text-base font-bold md:text-2xl text-white">Avery Ambient</h1>
       </div>
       {!user? 
       <Link href="/sign-in">
-      <button className="w-24 transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 md:w-32 dark:bg-white dark:text-black dark:hover:bg-gray-200">
+      <button className="w-24 transform rounded-lg bg-white px-6 py-2 font-medium text-purple-600 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/90 md:w-32">
         Login
       </button>
       </Link>:
